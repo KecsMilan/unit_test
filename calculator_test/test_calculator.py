@@ -1,3 +1,5 @@
+#python -m pytest test_calculator.py -v
+
 import pytest
 from calculator import sum, substract, multiply, divide
 
@@ -16,5 +18,5 @@ def test_multiply():
     assert multiply(-1, 5) == -5
 
 def test_divide():
-    #assert divide(0, 0) == 0
+    assert divide(0, 0) == "Error: Division by zero"
     assert divide(15, 3) == 5
